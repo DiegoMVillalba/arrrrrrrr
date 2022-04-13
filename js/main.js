@@ -1,4 +1,4 @@
-const arraySuplementos = [];
+const productos = [];
 const nombreUsuario=[];
 
 
@@ -22,21 +22,21 @@ class Suplementos {
 };
 
 const creatina = new Suplementos("CREATINA", "STAR NUTRITION", "300GRS", 5000);
-arraySuplementos.push(creatina);
+productos.push(creatina);
 // const creatina1 = new Suplementos("CREATINA", "STAR NUTRITION", "1000GRS", 9000);
 // suplementos.push(creatina1);
 // const creatina2 = new Suplementos("CREATINA", "MUSCLETECH", "300GRS", 7500);
 // suplementos.push(creatina2);
 const proteina = new Suplementos("WHEY PROTEIN", "STAR NUTRITION", "1000GRS", 8000);
-arraySuplementos.push(proteina);
+productos.push(proteina);
 // const proteina1 = new Suplementos("WHEY PROTEIN", "STAR NUTRITION", "5KG", 14000);
 // suplementos.push(proteina1);
 const bcaa = new Suplementos("BCAA", "STAR NUTRITION", "540GRS", 3800);
-arraySuplementos.push(bcaa);
+productos.push(bcaa);
 // const bcaa1 = new Suplementos("BCAA", "MUSCLETECH", "240GRS", 6800);
 // suplementos.push(bcaa1);
 const betaAlanina = new Suplementos("BETA ALANINA", "STAR NUTRITION", "300GRS", 4900);
-arraySuplementos.push(betaAlanina);
+productos.push(betaAlanina);
 // const betaAlanina1 = new Suplementos("BETA ALANINA","MUSCLETECH", "750GRS", 9600);
 // suplementos.push(betaAlanina1);
 
@@ -66,7 +66,7 @@ console.log(nombreUsuario);
 console.log("STOCK:");
 
 
-for(let suple of arraySuplementos){
+for(let suple of productos){
     console.log(suple.nombre);
 }
 
@@ -78,7 +78,7 @@ while(compra.toUpperCase() != "ESC"){
                         2.WHEY PROTEIN
                         3.BCAA
                         4.BETA ALANINA`);
-    for(let suple of arraySuplementos){
+    for(let suple of productos){
         if(compra.toUpperCase() == suple.nombre){
             suple.cuantoVale();
             total += suple.precio;
@@ -103,13 +103,13 @@ alert(`Su vuelto es: ${resultado}`);
 console.log(resultado);
 document.write(resultado);
 
-const creat = arraySuplementos.filter((el)=> el.nombre.includes('CREATINA'));
-const creataprecio = arraySuplementos.filter((el) => el.precio < 10000);
+const creat = productos.filter((el)=> el.nombre.includes('CREATINA'));
+const creataprecio = productos.filter((el) => el.precio < 10000);
 
 console.log(creat);
 console.log(creataprecio);
 
-const datos =arraySuplementos.find((el)=> el.nombre ===('WHEY PROTEIN'));
+const datos =productos.find((el)=> el.nombre ===('WHEY PROTEIN'));
 console.log(datos);
 
 
